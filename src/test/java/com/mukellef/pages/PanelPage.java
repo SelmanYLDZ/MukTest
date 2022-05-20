@@ -13,6 +13,8 @@ public class PanelPage {
 
     @FindBy(xpath ="(//input[@name='code'])[1]" )
     public WebElement MailVerificationCode;
+    @FindBy(xpath = "//button[@class='btn btn-primary'][1]")
+    public WebElement ConfirmMyEmailAddress;
 
     @FindBy(css = "XxPVvD2kR")
     public WebElement SendVerificationCodealert;
@@ -93,14 +95,14 @@ public class PanelPage {
 
 
 
-
-
-
-
-
     @FindBy(xpath = ("//button[@class='close'][3]"))
     public WebElement DogumTarihiNedenDogruGirmeliyimAlert;
 
+
+    public void MailVerification(String Test_Email_Password){
+        MailVerificationCode.sendKeys(Test_Email_Password);
+        ConfirmMyEmailAddress.click();
+    }
 
 
 
