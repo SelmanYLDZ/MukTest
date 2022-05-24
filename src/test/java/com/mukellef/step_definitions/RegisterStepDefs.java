@@ -39,22 +39,37 @@ public class RegisterStepDefs {
             registerPage.TestDropDown();
             System.out.println("I register as a user");
            // registerPage.singUp();
-
-
         }
-
         @Then("Title should be Mükellef | Anasayfa | Uçtan Uca İşletme Yönetimi")
         public void title_should_be_Mükellef_Anasayfa_Uçtan_Uca_İşletme_Yönetimi() {
-
             BrowserUtils.waitFor(1);
-
             Assert.assertTrue(Driver.get().getTitle().contains("Uçtan Uca İşletme Yönetimi"));
 
-
-            Driver.get().quit();
-
         }
+        @Given("enter valid MailVerificationCode")
+        public void enter_valid_MailVerificationCode() {
+        String MailVerificationCode = ConfigurationReader.get("Test_Email_Password");
 
+        BrowserUtils.waitFor(2);
+        RegisterPage registerPage = new RegisterPage() ;
+        registerPage.MailVerificationPassword(MailVerificationCode);
+        BrowserUtils.waitFor(3);
+         System.out.println("Close");
 
+         registerPage.CloseVerificationWindow();
+         //registerPage.EmailVerificationModelClose1.click();
+        //registerPage.MailVerificationPassword();
+
+    }
+
+    @Given("I should be able to click {string} button")
+    public void ı_should_be_able_to_click_button(String string) {
+
+    }
+
+    @Given("Title should be {string}")
+    public void title_should_be(String string) {
+
+    }
     }
 

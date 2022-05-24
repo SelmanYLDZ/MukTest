@@ -5,22 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.lang.ref.WeakReference;
-
 public class PanelPage {
     public PanelPage(){
         PageFactory.initElements(Driver.get(),this);}
 
-    @FindBy(xpath ="(//input[@name='code'])[1]" )
-    public WebElement MailVerificationCode;
-    @FindBy(xpath = "//button[@class='btn btn-primary'][1]")
-    public WebElement ConfirmMyEmailAddress;
+
 
     @FindBy(css = "XxPVvD2kR")
     public WebElement SendVerificationCodealert;
 
     @FindBy(xpath = "(//a[@class='btn-mukellef'])[1]")
-    public WebElement ŞirketimYokKurmakİstiyorumButton;
+    public WebElement HemenKurulumaBaşlaButton;
 
     @FindBy(xpath = "(//a[@class='btn-mukellef'])[2]")
     public WebElement VergiMuafiyetBelgesiİleDevamEdecegimButton;
@@ -99,10 +94,7 @@ public class PanelPage {
     public WebElement DogumTarihiNedenDogruGirmeliyimAlert;
 
 
-    public void MailVerification(String Test_Email_Password){
-        MailVerificationCode.sendKeys(Test_Email_Password);
-        ConfirmMyEmailAddress.click();
-    }
+
 
 
 
