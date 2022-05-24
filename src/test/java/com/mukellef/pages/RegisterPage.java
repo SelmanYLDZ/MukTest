@@ -47,6 +47,33 @@ public class RegisterPage extends BasePage {
     @FindBy(xpath = "//button[@id='emailVerifiedModalClose']")
     public WebElement EmailVerificationModelClose1;
 
+    @FindBy(xpath = "(//a[@class='btn-mukellef'])[1]")
+    public WebElement HemenKurulumaBaşlaButton;
+
+    @FindBy(xpath = "//button[@class='mukellef-secondary-btn panel-button']")
+    public WebElement PaneleDönButton;
+
+    @FindBy(css = "howToChoose")
+    public WebElement VideoyuİzleButton;
+
+    @FindBy(css = "row box-border selected")
+    public WebElement BireyselİşletmeButton;
+
+    @FindBy(xpath = "(//div[@class='row box-border'])[1]")
+    public WebElement BireyselSerbestMeslekButton;
+
+    @FindBy(xpath = "(//div[@class='row box-border'])[2]")
+    public WebElement KurumsalLimitedButton;
+
+    @FindBy(xpath = "(//div[@class='row box-border'])[3]")
+    public WebElement KurumsalAnonimŞirketiButton;
+
+    @FindBy(css = "forward")
+    public WebElement Panel1DevamEt;
+
+    @FindBy(css = "reservation")
+    public WebElement Panel1RandevuPlanlayin;
+
     public void register(){
     }
     Faker fake = new Faker();
@@ -77,6 +104,19 @@ public class RegisterPage extends BasePage {
          ConfirmMyEmailAddress.click();
          BrowserUtils.waitFor(1);
          EmailVerificationModelClose1.click();
+         BrowserUtils.waitFor(1);
+         HemenKurulumaBaşlaButton.click();
                 }
+
+                public void PanelStep0(){
+        BrowserUtils.waitFor(1);
+        BireyselİşletmeButton.click();
+        Panel1DevamEt.click();
+                }
+
+
+
+
+
 
 }
