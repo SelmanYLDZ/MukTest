@@ -370,6 +370,8 @@ public class BrowserUtils {
         new WebDriverWait(com.mukellef.utilities.Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
+    public static void waitForClickablility(ExpectedCondition<WebElement> elementToBeClickable) {
+    }
 }
 
 

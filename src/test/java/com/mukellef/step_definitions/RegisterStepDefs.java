@@ -20,7 +20,7 @@ public class RegisterStepDefs {
             System.out.println("Opening the login Page");
             Driver.get().get(ConfigurationReader.get("urlRegister"));
             BrowserUtils.waitFor(2);
-           // Driver.get().manage().window().maximize();
+            Driver.get().manage().window().maximize();
         }
         @When("I Register with valid Credentials")
         public void ı_Register_with_valid_Credentials() throws InterruptedException {
@@ -66,6 +66,19 @@ public class RegisterStepDefs {
         BrowserUtils.waitFor(1);
         Assert.assertTrue(Driver.get().getTitle().contains("Uçtan Uca İşletme Yönetimi"));
         System.out.println("Kullanıcı Register ekranında yönergelere uygun şekilde step1'e geçmiştir");
+    }
+    @Given("the user should be able to complete all the steps step by step")
+    public void the_user_should_be_able_to_complete_all_the_steps_step_by_step() {
+        String RegisterStep1TRTelNum=ConfigurationReader.get("Test_User_TelNoTR");
+        String RegisterStep1BirthDay=ConfigurationReader.get("Test_User_BirthDay");
+
+        BrowserUtils.waitFor(2);
+        RegisterPage registerPage = new RegisterPage();
+        registerPage.PanelStep0();
+        BrowserUtils.waitFor(2);
+        registerPage.PanelStep1(RegisterStep1TRTelNum, RegisterStep1BirthDay);
+
+
     }
 
 

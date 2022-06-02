@@ -10,4 +10,4 @@ Feature: Register
         And enter valid MailVerificationCode
         And I should be able to click "E-Posta Adresimi onayla" button
         And Title should be " Mükellef | Anasayfa | Uçtan Uca İşletme Yönetimi"
-    And User should be able to
+        And the user should be able to complete all the steps step by step
