@@ -12,5 +12,5 @@ Feature: Register
         And Title should be " Mükellef | Anasayfa | Uçtan Uca İşletme Yönetimi"
         And The user should be able to chose "Bireysel İşletme" button
         And the user should be able to write "tckn"
-        And the user should be able to Fill "Faaliyet Adres, Bilgisi" page
-        And the user should be able to Fill "Evrak Yükleme" page
+        And the user should be able to Fill "Faaliyet Adres, Bilgisi" page2
+        And the user should be able to Fill "Evrak Yükleme" page3

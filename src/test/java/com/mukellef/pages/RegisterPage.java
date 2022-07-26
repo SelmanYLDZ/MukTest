@@ -7,13 +7,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.swing.*;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class RegisterPage extends BasePage {
 
@@ -193,6 +188,8 @@ public class RegisterPage extends BasePage {
     public WebElement UploadFile2;
     @FindBy(xpath = "(//div[@class='dz-default dz-message'])[3]")
     public WebElement UploadFile3;
+    @FindBy(xpath = " //button[@class='forward w-100 h-100']")
+    public WebElement DevamEtButtonPage3;
 
 
 
@@ -380,7 +377,88 @@ public void FaaliyetAdressBilgileri(){
     DevamEtButtonPage2.click();
 
 }
+        public void EvrakYükleme(){
+         BrowserUtils.waitFor(2);
+       // UploadFile1.sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\TR.svg");
+          //  Driver.get().switchTo().activeElement().sendKeys("TR.svg");
+          //  UploadFile1.click();
 
+         //  Driver.get().switchTo().activeElement().findElement(By.xpath("UploadFile1")).sendKeys("\\Users\\mukellef\\Desktop\\2.svg");
+
+            Driver.get().switchTo().activeElement().findElement(By.xpath("UploadFile1")).sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\TR.svg");
+          //   Driver.get().findElement(By.xpath("(//div[@class='dz-default dz-message'])[1]")).sendKeys("\\Users\\mukellef\\Desktop\\2.svg");
+         //   Driver.get().switchTo()
+         //           .activeElement()
+         //           .sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\TR.svg");
+
+         //   Driver.get().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        //UploadFile1.sendKeys("\\Users\\mukellef\\Desktop\\2.svg");
+        // UploadFile1.sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\TR.svg");
+         //UploadFile1.sendKeys("/Users/mukellef/IdeaProjects/MukTest/Files/Tr.svg");
+         //UploadFile1.sendKeys("/Adsız/Kullanıcılar/mukellef/Masaüstü/1.jpg");
+            UploadFile2.sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\EE.svg");
+
+           //         Driver.get().switchTo()
+           //         .activeElement()
+           //         .sendKeys(
+            //                "\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\EE.svg");
+
+            Driver.get().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+         BrowserUtils.waitFor(5);
+         DevamEtButtonPage3.click();
+            BrowserUtils.waitFor(2);
+         System.out.println("Kullanıcı evrakları Başarılı şekilde yükledi");
+
+
+         //    Actions Act = new Actions(Driver.get());
+
+         //      String projectPath =System.getProperty("user.dir");
+         //        String filePath="\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\Tr.svg";
+         //   String fullPath = projectPath+ "/" +filePath;
+         //    Act.dragAndDrop(filePath,UploadFile1).build().perform();
+
+         //    UploadFile1.click();
+       // Act.doubleClick().sendKeys("\\Users\\mukellef/\\IdeaProjects\\MukTest\\Files\\Tr.svg").perform();
+        //     Act.doubleClick(UploadFile1).sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\Tr.svg").perform();
+
+
+       //  Act.doubleClick(("//div[@class='dz-default dz-message'])[1]".sendKeys("\\Users\\mukellef\\IdeaProjects\\MukTest\\Files\\Tr.svg").perform();
+       //  Act.doubleClick(UploadFile1.sendKeys("\\Users\\mukellef/\\Desktop\\TR.svg")).perform();
+       //  UploadFile1.sendKeys(fullPath);
+
+
+//Act.doubleClick(Driver.get().findElement(UploadFile1.sendKeys("\\Users\\mukellef\\Desktop")))
+
+        //    UploadFile1.click();
+        //    UploadFile1.sendKeys("\\Users\\mukellef/\\Desktop");
+            BrowserUtils.waitFor(2);
+           // Driver.get().findElement(By.xpath("(//div[@class='dz-default dz-message'])[1]")).sendKeys(ProjectPath+"\\Files\\TR.svg");
+            //
+           // UploadFile1.sendKeys("\\Users\\mukellef/\\Desktop\\1.svg"); //Users/mukellef/Desktop
+ //Driver.get().findElement(By.xpath("(//div[@class='dropzone'])[1]")).sendKeys("\\Users\\mukellef/\\Masaüstü\\Tr.svg");
+
+            //UploadFile1.click();
+       //  WebElement chooseFile=Driver.get().findElement(By.name("(//div[@class='dz-default dz-message'])[1]"));
+       // UploadFile1.sendKeys("/Users/mukellef/Downloads/1.svg");
+       // System.out.println("File is upluaded Succesfully");
+
+           // WebElement UploadFilex = Driver.get().findElement(By.xpath("xpath = (//div[@id='dropzone'])[1]"));
+           //    System.out.println("Upload Click");
+         //  Runtime.getRuntime().exec("\\Users\\mukellef/\\Downloads\\1.svg");
+
+           // UploadFile1.sendKeys("\\Users\\mukellef/\\Desktop\\Tr.svg"); //Uploading the file using sendKeys
+           // System.out.println("File is Uploaded Successfully");
+
+       //     JavascriptExecutor jsPhoto = (JavascriptExecutor) Driver.get();
+       //     jsPhoto.executeScript("arguments[0].setAttribute('style', arguments[1])", Driver.get().findElement(By.xpath("(//div[@class='dz-default dz-message'])[1]")), "0");
+       //     jsPhoto.executeScript("arguments[0].setAttribute('class', arguments[1])", Driver.get().findElement(By.xpath("//input[@type='file']/../../div[2]")), "a");
+       //     Driver.get().findElement(By.xpath("(//div[@class='dz-default dz-message'])[1]")).sendKeys("\\Users\\mukellef/\\Masaüstü\\Tr.svg");
+
+
+
+
+
+}
 
 
 }
